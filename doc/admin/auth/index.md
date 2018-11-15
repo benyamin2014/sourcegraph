@@ -5,6 +5,8 @@
 Sourcegraph supports the following ways for users to sign in:
 
 - [Builtin](#builtin-authentication)
+- [GitHub OAuth](#github)
+- [GitLab OpenID Connect](#gitlab)
 - [OpenID Connect](#openid-connect) (including [Google accounts on G Suite](#g-suite-google-accounts))
 - [SAML](#saml)
 - [HTTP authentication proxies](#http-authentication-proxies)
@@ -25,6 +27,17 @@ Site configuration example:
 ```
 
 The top-level [`auth.public`](../site_config/all.md#authpublic-boolean) (default `false`) site configuration option controls whether anonymous users are allowed to access and use the site without being signed in .
+
+## GitHub
+
+TODO
+
+## GitLab
+
+Notes:
+- GitLab needs to be running with HTTPS/TLS enabled. Not only is this necessary for
+  security. GitLab's OpenID Connect endpoint always returns a issuer URL with `https://` scheme, so
+  it won't work if GitLab isn't accessible via HTTPS.
 
 ## OpenID Connect
 
