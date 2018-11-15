@@ -101,6 +101,8 @@ case $GORACED in
 	;;
 esac
 
+export GO111MODULE=off
+
 # Shared logic for the go install part
 do_install() {
 	race=$1
